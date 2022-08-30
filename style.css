@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  background-color: white;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+nav{
+  /* background: rgba(255, 255, 255, 0.7); */
+  /* box-shadow: 0 2px 12px 0 rgba(206, 206, 206, 0.37); */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgb(181, 181, 181);
+}
+nav {
+  z-index: 1;
+  display: flex;
+
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+}
+#nav-logo {
+  float: left;
+  /* border-radius: 50px; */
+}
+.hamburger {
+  position: relative;
+}
+#hamburger-logo {
+  float: right;
+}
+#hamburger-menu {
+  position: absolute;
+  right: 8rem;
+  top: 0rem;
+  transition: 10ms;
+  /* border-radius: 15px; */
+}
+#hamburger-menu {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+}
+#hamburger-menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.6rem;
+  font-family: "roboto";
+  padding: 1em 2.5em;
+}
+#hamburger-menu a:hover {
+  color: white;
+  text-decoration: underline;
+}
+.home {
+  /* position: sticky;
+  top: 0px; */
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.home button {
+  margin-top: 4rem;
+  padding: 1.5em 3em;
+  border-style: none;
+  border: 2px solid #00527b;
+  color: #00527b;
+  font-weight: bold;
+}
+button:hover{
+  border-radius: 0px 15px  0px 15px ;
+  transition: 0.5s;
+    
+}
+
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.home h1 {
+  font-family: "Californian FB";
+  font-size: 10em;
+  /* margin-top: -10px; */
+}
+.home h2 {
+  font-family: "futura-black";
+  font-weight: bolder;
+  font-size: 4.6em;
+  line-height: 50px;
+}
+.home p {
+  font-family: "roboto";
+  font-size: 1.6em;
+  margin-top: 5rem;
+}
+.social-icon{
+  display: none;
+}
+#about {
+  padding: 6em;
+  background-image: url("src/aboutBG.svg");
+  background-size: contain;
+}
+#about h1 {
+  color: white;
+  font-size: 3.2rem;
+  font-family: "Californian FB";
+  padding-bottom: 20px;
+}
+#about p {
+  color: white;
+  font-size: 16px;
+  font-family: "open sans";
+}
+
+#education {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  margin: 5em 10em;
+  align-items: center;
+}
+.edu-details h1 {
+  font-family: "Californian FB";
+  font-size: 48px;
+}
+.edu-details p {
+  font-family: "open sans";
+  padding: 10px 10px;
+}
+
+#works {
+  padding: 50px;
+}
+#works h1 {
+  text-align: left;
+  font-family: "Californian FB";
+  font-size: 48px;
+}
+.works-container {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  padding-top: 50px;
+}
+.card {
+  border-radius: 20px;
+}
+.card-body {
+  border-radius: 10px;
+}
+.card-tittle {
+  padding: 5px;
+}
+.card {
+  margin: 10px;
+}
+.card-body {
+  background-color: rgb(44, 44, 44);
+
+  height: 250px;
+  width: 350px;
+}
+.card-body:hover{
+  box-shadow: 0px 0px 16px 0px rgb(202, 202, 202);
+}
+.card-tittle {
+  font-size: 16px;
+  font-family: "open sans";
+}
+
+
+#contact{
+  font-size: 16px;
+  color:white;
+  /* height:200px; */
+  padding: 50px 0px;
+  width: 100%;
+  background-color: #00527b;
+
+  display: flex;
+ flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#contact h1{
+  font-size: 32px;
+}
+#contact p{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 10px 0px;
+}
+.emailBox{
+  /* padding:1em 10em; */
+  width: 100%;
+  height: 50px;
+  /* border-radius: 10px; */
+  border-style: none;
+}
+.messageBox{
+  /* padding:3em 20em; */
+  height: 6em; width: 40em;
+  /* border-radius: 10px; */
+  border-style: none;
+}
+
+#contact button{
+  margin-top: 50px;
+  padding: 1em 2.5em;
+  font-size: 16px;
+}
+
+
+@media screen and (max-width: 500px) {
+  #hamburger-menu {
+    display: none;
+    flex-wrap: wrap;
+    border-radius: 15px;
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 0px 1px;
+    padding-top: 100px;
+  }
+  .home button {
+    display: flex;
+    align-self: center;
+    border-radius: 10px;
+
+    margin-top: 5rem;
+
+    padding: 1.5em 3em;
+    border-style: none;
+    border: 2px solid #0088cc;
+    color: #0088cc;
+    font-weight: bold;
+  }
+  .social-icon{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .homeContent .social-icon a img{
+    width: 35px; height: 35px;
+    background-size: contain;
+    border-style: none;
+    border-radius: 0px;
+
+    margin:50px 30px;
+    
+  }
+  .home img {
+    width: auto;
+    height: 20em;
+    border: 2px solid black;
+    border-radius: 100%;
+  }
+  .homeContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.homeContent h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 6em;
+    text-align: center;
+    /* margin-top: -2.5em; */
+  }
+  .homeContent h2 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    font-size: 2em;
+    margin-top: 30px;
+    margin-bottom: -40px;
+    line-height: 1em;
+    text-align: center;
+  }
+  .homeContent p {
+    font-family: "roboto";
+    /* margin-top: 50px; */
+    font-size: 18px;
+    text-align: center;
+  }
+  #about {
+    margin-top: 20px;
+    background-color: black;
+    padding: 20px 15px;
+    background-image: none;
+  }
+  #about h1 {
+    font-size: 20px;
+  }
+  #about p {
+    font-size: 18px;
+  }
+
+  #education {
+    padding-top: 1em;
+    margin: 50px 15px;
+  }
+  #education img {
+    display:none;
+  }
+  .edu-details h1 {
+    font-size: 32px;
+  }
+  .edu-details p{
+    font-size: 18px;
+    border-left: 2px solid black;
+  }
+
+  #works h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  #contact{
+    background-color: rgb(13, 13, 13);
+  }
+
+  .emailBox{
+    background-color:rgb(136, 136, 136);
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: 27em;
+    height: 50px;
+    border-style: none;
+  }
+  .messageBox{
+    background-color:rgb(136, 136, 136);
+    height: 10em; width: 100%;
+    border-radius: 10px;
+    padding: 5px 10px;
+    border-style: none;
+  }
+  .messageBox:hover,
+  .emailBox:hover{
+    background-color: whitesmoke;
+  }
+  #sendbtn{
+    border-style: none;
+    border-radius: 20px;
+  }
+
+}

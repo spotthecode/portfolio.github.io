@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>@mdazad2.0</title>
+  </head>
+  <body>
+    <!-- javaSript Code to show and hide code div -->
+    <script>
+      // code for hamburger functionality
+      function showHide() {
+        var x = document.getElementById("hamburger-menu");
+        if (x.style.display === "flex") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "flex";
+        }
+      }
+
+      function great(){
+        document.getElementById("sendbtn").innerHTML="Thank you!";
+      }
+
+    </script>
+
+    <!-- ****Navigation:start***** -->
+    <nav>
+      <img id="nav-logo" src="src/nav-logo.svg" width="200px" />
+
+      <div class="hamburger">
+        <img
+          id="hamburger-logo"
+          onclick="showHide();"
+          src="src/hamburger.png"
+          width="50px"
+        />
+        <div id="hamburger-menu" style="background-color: #0088cc">
+          <a href="#">resume</a>
+          <a href="#about">about</a>
+          <a href="#education">education</a>
+          <a href="#works">works</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ******heroSection:start**** -->
+    <div class="home">
+      <img src="src/BlackImage.png" width="450px" />
+
+      <div class="homeContent">
+        <h1>MD AZAD</h1>
+        <h2>
+          UI/UX Desinger<br />
+          Front-End web Developer
+        </h2>
+        <p>HTML | CSS | JavaScript | ReactJS | Adobe XD</p>
+        <button>RESUME</button>
+
+        <div class="social-icon">
+          <a href="https://www.instagram.com/mdazad2.0/"><img src="src/instagram.png" alt="image"></a>
+          <a href="#"><img src="src/github.png" alt="image"></a>
+          <a href="http://www.linkedin.com/in/mdazad2"><img src="src/linkedin.png" alt="image"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ******about section****** -->
+    <div id="about" style="position: relative">
+      <h1>ABOUT ME</h1>
+      <p>
+        Hey,<br />
+        I'm Azad, 21 years old UI/UX Desinger | Front-end web developer,
+        Passionate towards <br />Designing and Development <br />
+        Personal work experience since 2020 without Graduation Degree.
+      </p>
+    </div>
+
+    <!-- ****** educations******* -->
+    <div id="education" style="min-height: 400px">
+      <img src="src/Certification.png" width="600px" />
+      <div class="edu-details">
+        <h1>EDUCATIONS</h1>
+        <p>
+          <b>77.28% | CGPA 8.48</b> <br />Diploma in Computer Science and
+          Engineering <br />Grad- Aug 2022 <br />Government Polytechnic, Chapra
+          <br />SBTE Patna
+        </p>
+        <p>
+          <b>76.4%</b> <br />12th (intermediate) - Science(PCM) <br />Grad-
+          March 2019 <br />RSS Inter College Chochahan, Muzaffarpur <br />BSEB
+          Patna
+        </p>
+        <p>
+          <b>70.2%</b> <br />10th(Matric) <br />Grad- June g 2017 <br />RK High
+          School Sain, Vaishali <br />BSEB Patna
+        </p>
+      </div>
+    </div>
+
+    <!-- ****work/project*** -->
+    <div>
+      <h1>WORK/PROJECTS</h1>
+      <div class="works-container">
+        <div class="card">
+          <div class="card-body" id="card-1">
+            <img src="src/Certification.png" width="200px" />
+          </div>
+          <p class="card-tittle">coming soon...</p>
+        </div>
+        <div class="card">
+          <div class="card-body" id="card-2">
+            <img src="src/Certification.png" width="200px" />
+          </div>
+          <p class="card-tittle">coming soon...</p>
+        </div>
+        <div class="card">
+          <div class="card-body" id="card-3">
+            <img src="src/Certification.png" width="200px" />
+          </div>
+          <p class="card-tittle">coming soon...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ****contact me **** -->
+    <div id="contact">
+      <h1>feedback</h1>
+      <form action="userDetails.php">
+        <p>Email:</p>
+        <input type="email" name="userEmail"  class="emailBox"/>
+
+        <p>Type message:</p>
+        <input type="text" name="message" title=""  class="messageBox"/>
+      </form>
+
+      <button type="submit" name="sendbtn" id="sendbtn" onclick="greet()">send</button>
+    </div>
+  </body>
+</html>
+
+<style>
+  
+
+</style>
