@@ -7,18 +7,12 @@ html {
   font-size: 10px;
   scroll-behavior: smooth;
 }
-nav{
-  /* background: rgba(255, 255, 255, 0.7); */
-  /* box-shadow: 0 2px 12px 0 rgba(206, 206, 206, 0.37); */
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
 
-  border-bottom: 1px solid rgb(181, 181, 181);
-}
 nav {
   z-index: 1;
   display: flex;
 
+  background-color: white;
   justify-content: space-between;
   position: fixed;
   width: 100%;
@@ -35,7 +29,9 @@ nav {
   float: right;
 }
 #hamburger-menu {
+  background-color: transparent;
   position: absolute;
+  
   right: 8rem;
   top: 0rem;
   transition: 10ms;
@@ -45,6 +41,7 @@ nav {
   display: none;
   justify-content: space-around;
   align-items: center;
+  transition: 0.5s;
 }
 #hamburger-menu a {
   text-decoration: none;
@@ -54,7 +51,7 @@ nav {
   padding: 1em 2.5em;
 }
 #hamburger-menu a:hover {
-  color: white;
+  color: #0088cc;
   text-decoration: underline;
 }
 .home {
@@ -66,18 +63,20 @@ nav {
   justify-content: space-evenly;
   align-items: center;
 }
+
 .home button {
   margin-top: 4rem;
   padding: 1.5em 3em;
   border-style: none;
   border: 2px solid #00527b;
+  border-radius: 50px;
   color: #00527b;
   font-weight: bold;
+  cursor: pointer;  
 }
-button:hover{
-  border-radius: 0px 15px  0px 15px ;
-  transition: 0.5s;
-    
+
+button:active{
+border-radius: 50px; 
 }
 
 .homeContent {
@@ -86,18 +85,18 @@ button:hover{
   align-items: flex-start;
 }
 .home h1 {
-  font-family: "Californian FB";
+  font-family:'GILROY', "futura-black","apples script dem",'Times New Roman';
   font-size: 10em;
   /* margin-top: -10px; */
 }
 .home h2 {
-  font-family: "futura-black";
+  font-family: 'GILROY',"futura-black";
   font-weight: bolder;
   font-size: 4.6em;
   line-height: 50px;
 }
 .home p {
-  font-family: "roboto";
+  font-family:'GILROY', "roboto";
   font-size: 1.6em;
   margin-top: 5rem;
 }
@@ -111,14 +110,14 @@ button:hover{
 }
 #about h1 {
   color: white;
-  font-size: 3.2rem;
+  font-size:48px;
   font-family: "Californian FB";
   padding-bottom: 20px;
 }
 #about p {
   color: white;
   font-size: 16px;
-  font-family: "open sans";
+  font-family: "roboto";
 }
 
 #education {
@@ -130,10 +129,10 @@ button:hover{
 }
 .edu-details h1 {
   font-family: "Californian FB";
-  font-size: 48px;
+  font-size: 40px;
 }
 .edu-details p {
-  font-family: "open sans";
+  font-family: "roboto";
   padding: 10px 10px;
 }
 
@@ -143,7 +142,7 @@ button:hover{
 #works h1 {
   text-align: left;
   font-family: "Californian FB";
-  font-size: 48px;
+  font-size: 40px;
 }
 .works-container {
   display: flex;
@@ -156,6 +155,11 @@ button:hover{
 
   padding-top: 50px;
 }
+#card-1{
+  background-image: url("works/src/landingPage.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .card {
   border-radius: 20px;
 }
@@ -164,6 +168,7 @@ button:hover{
 }
 .card-tittle {
   padding: 5px;
+  padding-left: 10px;
 }
 .card {
   margin: 10px;
@@ -179,7 +184,7 @@ button:hover{
 }
 .card-tittle {
   font-size: 16px;
-  font-family: "open sans";
+  font-family: "roboto";
 }
 
 
@@ -187,69 +192,107 @@ button:hover{
   font-size: 16px;
   color:white;
   /* height:200px; */
-  padding: 50px 0px;
+  /* padding: 50px 0px; */
   width: 100%;
   background-color: #00527b;
-
-  display: flex;
+      display: flex;
  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+align-items: center;
+    padding: 50px;
+  
 }
 #contact h1{
   font-size: 32px;
+    margin-bottom: 40px
 }
 #contact p{
   font-family:Arial, Helvetica, sans-serif;
   font-size: 16px;
   margin: 10px 0px;
 }
-.emailBox{
-  /* padding:1em 10em; */
-  width: 100%;
-  height: 50px;
-  /* border-radius: 10px; */
-  border-style: none;
-}
-.messageBox{
-  /* padding:3em 20em; */
-  height: 6em; width: 40em;
-  /* border-radius: 10px; */
-  border-style: none;
+form{
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+form .emailBox,
+form .messageBox{
+  
+  height: 50px; 
+width: 70%;
+  border-style: none;
+    padding: 0px 12px;
+    margin:8px;
+}
+form .messageBox{
+    height: 100px;
+}
+
+
 #contact button{
-  margin-top: 50px;
+  margin-top: 10px;
   padding: 1em 2.5em;
   font-size: 16px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for mobile view */
 
 @media screen and (max-width: 500px) {
   #hamburger-menu {
     display: none;
     flex-wrap: wrap;
     border-radius: 15px;
+    background-color: rgb(241, 241, 241);
+    border: 2px solid rgb(190, 190, 190);
+      
+  }
+  #hamburger-menu {
+    position: absolute;
+    
+    right: 0rem;
+    top: 5rem;
+   
+    /* border-radius: 15px; */
+  }
+  #hamburger-menu {
+    flex-direction: column;
+    align-items: flex-start;
   }
   .home {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    margin: 0px 1px;
+    margin: 0px 5px;
     padding-top: 100px;
   }
   .home button {
     display: flex;
     align-self: center;
-    border-radius: 10px;
+    /* border-radius: 15px; */
 
     margin-top: 5rem;
 
     padding: 1.5em 3em;
     border-style: none;
-    border: 2px solid #0088cc;
-    color: #0088cc;
+    /* border: 2px solid #0088cc; */
+    border: 2px solid #128c7e;
+    color: #128c7e;
     font-weight: bold;
   }
   .social-icon{
@@ -268,8 +311,9 @@ button:hover{
   }
   .home img {
     width: auto;
-    height: 20em;
-    border: 2px solid black;
+    height: 25em;
+    background-size:contain;
+    /* border: 2px solid black; */
     border-radius: 100%;
   }
   .homeContent{
@@ -279,14 +323,14 @@ button:hover{
   }
 .homeContent h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 6em;
+    font-size: 32px;
     text-align: center;
     /* margin-top: -2.5em; */
   }
   .homeContent h2 {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bolder;
-    font-size: 2em;
+    font-size: 24px;
     margin-top: 30px;
     margin-bottom: -40px;
     line-height: 1em;
@@ -295,7 +339,7 @@ button:hover{
   .homeContent p {
     font-family: "roboto";
     /* margin-top: 50px; */
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
   }
   #about {
@@ -305,10 +349,10 @@ button:hover{
     background-image: none;
   }
   #about h1 {
-    font-size: 20px;
+    font-size: 26px;
   }
   #about p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   #education {
@@ -322,12 +366,12 @@ button:hover{
     font-size: 32px;
   }
   .edu-details p{
-    font-size: 18px;
+    font-size: 16px;
     border-left: 2px solid black;
   }
 
   #works h1 {
-    font-size: 32px;
+    font-size: 26px;
     text-align: center;
   }
 
@@ -339,7 +383,7 @@ button:hover{
     background-color:rgb(136, 136, 136);
     border-radius: 10px;
     padding: 5px 10px;
-    width: 27em;
+    width: 20rem;
     height: 50px;
     border-style: none;
   }
