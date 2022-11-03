@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="http://fonts.cdnfonts.com/css/pieapple" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/apples-script-demo" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/helios-antique" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/adios-script-pro" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>            
+                
+                
+                
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="black">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>@mdazad2.0</title>
+    <link rel="stylesheet" href="/works/work.css" />
+    
+    <title>Portfolio</title>
   </head>
   <body>
     <!-- javaSript Code to show and hide code div -->
@@ -28,7 +39,8 @@
 
     <!-- ****Navigation:start***** -->
     <nav>
-      <img id="nav-logo" src="src/nav-logo.svg" width="200px" />
+      <!-- <img id="nav-logo" src="src/nav-logo.svg" width="150px" /> -->
+      <div id="nav-logo"></div>
 
       <div class="hamburger">
         <img
@@ -37,27 +49,28 @@
           src="src/hamburger.png"
           width="50px"
         />
-        <div id="hamburger-menu" style="background-color: #0088cc">
+        <div id="hamburger-menu" >
           <a href="#">resume</a>
           <a href="#about">about</a>
-          <a href="#education">education</a>
+          <a href="#education">	<i class='fas fa-book'></i>education</a>
           <a href="#works">works</a>
+          <a href="#contact">contacts</a>
         </div>
       </div>
     </nav>
 
     <!-- ******heroSection:start**** -->
     <div class="home">
-      <img src="src/BlackImage.png" width="450px" />
+      <img src="src/BlackImage.png" width="650px" />
 
       <div class="homeContent">
-        <h1>MD AZAD</h1>
+        <h1>I'M</h1>
         <h2>
-          UI/UX Desinger<br />
+          UI Desinger<br />
           Front-End web Developer
         </h2>
-        <p>HTML | CSS | JavaScript | ReactJS | Adobe XD</p>
-        <button>RESUME</button>
+        <p>HTML | CSS | Bootstrap | JS, ReactJS, NextJS | Adobe XD, Figma </p>
+        <button><i class="bi bi-whatsapp"></i>BLOGS</button>
 
         <div class="social-icon">
           <a href="https://www.instagram.com/mdazad2.0/"><img src="src/instagram.png" alt="image"></a>
@@ -74,13 +87,13 @@
         Hey,<br />
         I'm Azad, 21 years old UI/UX Desinger | Front-end web developer,
         Passionate towards <br />Designing and Development <br />
-        Personal work experience since 2020 without Graduation Degree.
+        Personal work experience since 2020.
       </p>
     </div>
 
     <!-- ****** educations******* -->
     <div id="education" style="min-height: 400px">
-      <img src="src/Certification.png" width="600px" />
+      <img src="src/E-letter.svg" width="400px" />
       <div class="edu-details">
         <h1>EDUCATIONS</h1>
         <p>
@@ -101,14 +114,14 @@
     </div>
 
     <!-- ****work/project*** -->
-    <div>
-      <h1>WORK/PROJECTS</h1>
+    <div id="works">
+      <h1>WORKS/PROJECTS</h1>
       <div class="works-container">
         <div class="card">
           <div class="card-body" id="card-1">
-            <img src="src/Certification.png" width="200px" />
+            <!-- <img src="works/src/landingPage.png" width="200px" /> -->
           </div>
-          <p class="card-tittle">coming soon...</p>
+          <p class="card-tittle">Home web page design.</p>
         </div>
         <div class="card">
           <div class="card-body" id="card-2">
@@ -127,13 +140,12 @@
 
     <!-- ****contact me **** -->
     <div id="contact">
-      <h1>feedback</h1>
+      <h1>contact me</h1>
       <form action="userDetails.php">
-        <p>Email:</p>
-        <input type="email" name="userEmail"  class="emailBox"/>
-
-        <p>Type message:</p>
-        <input type="text" name="message" title=""  class="messageBox"/>
+       
+        <input type="email" placeholder="Enter you email" name="userEmail"  class="emailBox"/>
+        
+        <input type="text" placeholder="Type you message" name="message" title=""  class="messageBox"/>
       </form>
 
       <button type="submit" name="sendbtn" id="sendbtn" onclick="greet()">send</button>
